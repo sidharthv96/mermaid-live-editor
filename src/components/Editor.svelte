@@ -7,10 +7,11 @@
   // import mermaid from '@mermaid-js/mermaid';
   import mermaid from '@mermaid';
   import Error from './Error.svelte';
-  import { initEditor } from './editor-utils';
+  import { getResizeHandler, initEditor } from './editor-utils';
   import 'monaco-editor/esm/vs/editor/browser/controller/coreCommands.js';
   import 'monaco-editor/esm/vs/editor/contrib/find/findController.js';
   import * as monaco from 'monaco-editor/esm/vs/editor/editor.api.js';
+  import { watchResize } from 'svelte-watch-resize';
 
   export let code = '';
   const isDarkMode =
@@ -22,6 +23,7 @@
   let decorations = [];
   const decArr = [];
   let editorElem = null;
+  let resizeHandler = () => {};
   const handleCodeUpdate = (code) => {
     try {
       mermaid.parse(code);
@@ -76,6 +78,7 @@
         theme: 'myCoolTheme',
         language: 'mermaid',
       });
+      resizeHandler = getResizeHandler(edit);
 
       let decorations = [];
 
@@ -126,7 +129,7 @@
 </style>
 
 <div id="editor-container">
-  <div id="editor" />
+  <div id="editor" use:watchResize={resizeHandler} />
   {#if error}
     <Error errorText="Syntax Error" />
   {/if}
