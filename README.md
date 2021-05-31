@@ -49,7 +49,7 @@ registry=https://registry.npmjs.com/
 yarn dev -- --open
 ```
 
-This app is created with Svelte Kit.
+This app is created with Svelte Kit and TailwindCSS
 
 ## Release
 
