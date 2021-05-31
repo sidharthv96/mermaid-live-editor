@@ -3,7 +3,7 @@
 	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
 	// This can be removed once https://github.com/sveltejs/kit/issues/1612 is fixed.
-	// Then rename temp-service-worker to service-worker and vite will bundle it automatically.
+	// Then rename temp-service-worker to service-worker, move it into src and vite will bundle it automatically.
 	onMount(() => {
 		if ('serviceWorker' in navigator) {
 			navigator.serviceWorker.register(`${base}/temp-service-worker.js`);
