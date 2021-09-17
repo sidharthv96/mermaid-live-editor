@@ -185,10 +185,10 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@sveltejs/adapter-static@1.0.0-next.11":
-  version "1.0.0-next.11"
-  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.11.tgz#f7bac062b96644d7a4617a3f44bf6f084b0e0052"
-  integrity sha512-flqdt6nJxzRPfhYDZbvrw1iFmc87E3rLJ/Rz7K+d4or/slyqHSxH+yOmQ7CJKej5DidliuTpAOvulithuDc0yw==
+"@sveltejs/adapter-static@1.0.0-next.19":
+  version "1.0.0-next.19"
+  resolved "https://registry.yarnpkg.com/@sveltejs/adapter-static/-/adapter-static-1.0.0-next.19.tgz#28f38b021ed5349be14dbd1b29d5f238b3fe6d7e"
+  integrity sha512-uZNJNVGCdiLo1XnMbezlAUsNSzB36oqtXvaUiDmy+Lv0jKU7ZukDQnJ0zWAatdqXl9ETlG4YyTWI/i7E8nmLpQ==
 
 "@sveltejs/kit@^1.0.0-next.109":
   version "1.0.0-next.109"
